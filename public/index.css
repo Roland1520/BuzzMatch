@@ -1,0 +1,221 @@
+/* --- EGYEDI STÍLUSOK (A PPT DIZÁJN ALAPJÁN) --- */
+:root {
+    --bg-dark: #0f172a;       /* Sötétkék háttér - marad, hogy a neon hatás érvényesüljön */
+    --bg-card: #1e293b;       /* Kártya háttér */
+    --text-main: #f8fafc;     /* Világos szöveg */
+    
+    /* JAVÍTÁS: Fehérre állítottuk a muted színt is */
+    --text-muted: #ffffff;    
+    
+    /* ÚJ SZÍNPALETTA: BUZZMATCH NARANCS */
+    --accent-primary: #fbbf24;  /* Világos borostyán/sörszín */
+    --accent-secondary: #ea580c; /* Élénk égetett narancs */
+    --gradient: linear-gradient(135deg, #fbbf24 0%, #ea580c 100%);
+}
+
+/* JAVÍTÁS: Ezzel kényszerítjük rá a fehér színt a Bootstrap elemekre */
+.text-muted {
+    color: var(--text-muted) !important;
+    opacity: 0.9; /* Kicsit áttetsző, hogy ne legyen túl harsány, de olvasható maradjon */
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Urbanist', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Tipográfia */
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+.text-gradient {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* Navigáció */
+.navbar {
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(251, 191, 36, 0.1); /* Halvány narancs keret */
+}
+
+.navbar-brand {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--text-main) !important;
+}
+
+.nav-link {
+    color: var(--text-main) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent-primary) !important; /* Narancs hover */
+}
+
+/* Gombok */
+.btn-primary-gradient {
+    background: var(--gradient);
+    border: none;
+    color: #0f172a; /* Sötét szöveg a világos narancson jobban olvasható */
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(234, 88, 12, 0.4); /* Narancs ragyogás */
+    color: #0f172a;
+}
+
+.btn-outline-light {
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 700;
+}
+
+/* Hero Szekció */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    /* Narancssárga háttérfény */
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.15) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.hero-img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+    transition: transform 0.5s ease;
+    border: 1px solid rgba(251, 191, 36, 0.2); /* Finom narancs keret */
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
+}
+
+/* Kártyák */
+.custom-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 30px rgba(234, 88, 12, 0.1);
+}
+
+.icon-box {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* App Showcase */
+.app-mockup-wrapper {
+    position: relative;
+    padding: 20px;
+    /* Narancs ragyogás a telefon mögött */
+    background: radial-gradient(circle, rgba(234, 88, 12, 0.15) 0%, transparent 70%);
+}
+
+.app-mockup {
+    border-radius: 20px;
+    border: 8px solid #334155;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Team Képek */
+.team-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-secondary); /* Narancs keret */
+    margin-bottom: 1.5rem;
+}
+
+/* Logó stílus a navigációs sávban */
+.navbar-logo {
+    height: 40px;            /* A logó magassága igazodjon a szöveghez */
+    width: auto;             /* A szélesség automatikus legyen */
+    margin-right: 10px;      /* Kis távolság a logó és a szöveg között */
+    vertical-align: middle;  /* Középre igazítás a szöveggel */
+    border-radius: 8px;      /* Opcionális: lekerekített sarkok */
+    border: 1px solid var(--accent-primary); /* Finom keret, hogy jobban látszódjon sötétben */
+}
+
+/* Footer / CTA */
+.cta-footer {
+    background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('http://googleusercontent.com/image_collection/image_retrieval/15158728875726651386');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid var(--accent-secondary);
+}
+
+/* Reszponzív */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .hero-section { padding: 40px 0; text-align: center; }
+    .hero-img { height: auto; margin-top: 30px; }
+    .section-padding { padding: 60px 0; }
+}
+
+.section-padding { padding: 100px 0; }

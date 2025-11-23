@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuzzMatch - Kevesebb swipe, több shot.</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts (Urbanist) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Egyedi CSS betöltése -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Belső stílus a logóhoz (hogy a preview-ban is működjön fájlcsere nélkül) -->
+    <style>
+        .navbar-logo {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 8px;
+            border: 1px solid var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGÁCIÓ (LOGÓVAL) -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- LOGÓ BEILLESZTÉSE -->
+                <img src="/public/images/buzzmatch_logo.png" alt="BuzzMatch Logo" class="navbar-logo">
+                BuzzMatch<span style="color:var(--accent-primary)">.</span>
+            </a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#mission">Küldetés</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Funkciók</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#partners">Partnereknek</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Csapat</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="#download" class="btn btn-primary-gradient">Letöltés</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-bg-glow"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 mb-4">Kevesebb swipe,<br><span class="text-gradient">több shot. 🍻</span></h1>
+                    <p class="lead text-muted mb-5">Az egyetlen alkalmazás, ami nem a végtelen chatelésről szól, hanem a valódi találkozásról. Fedezd fel a város legjobb bulijait és találd meg a társaságod még ma este!</p>
+                    <div class="d-flex gap-3 flex-wrap justify-content-md-start justify-content-center">
+                        <a href="#" class="btn btn-primary-gradient"><i class="fa-brands fa-apple me-2"></i>App Store</a>
+                        <a href="#" class="btn btn-outline-light"><i class="fa-brands fa-google-play me-2"></i>Google Play</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/15158728875726651386" alt="BuzzMatch Party" class="hero-img img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION / PROBLÉMA-MEGOLDÁS -->
+    <section id="mission" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Miért a BuzzMatch?</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="custom-card">
+                        <h3 class="h4 mb-3 text-danger"><i class="fa-solid fa-face-meh me-2"></i> A Probléma</h3>
+                        <p class="text-muted">Ismered az érzést, amikor belépsz egy szórakozóhelyre, de nem ismersz senkit? A kínos csendet, a nehézkes ismerkedést és az online társkeresők végeláthatatlan, személytelen üzenetváltásait?</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card" style="border-color: var(--accent-primary);">
+                        <h3 class="h4 mb-3" style="color: var(--accent-primary);"><i class="fa-solid fa-face-laugh-beam me-2"></i> A Megoldás</h3>
+                        <p class="text-muted">A BuzzMatch megtöri a jeget. Nem randizni hívunk, hanem bulizni. Közös érdeklődés, azonnali közösségi élmény és "jégtörő" játékok segítenek, hogy az első "szia" helyett már a közös koccintás legyen az első lépés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUNKCIÓK (GRID) -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Hogyan működik?</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="custom-card text-center">
+                        <div class="icon-box"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h3>Interaktív Térkép</h3>
+                        <p class="text-muted">Lásd valós időben, hol zajlik az élet. Szűrj zenei stílusra, italakciókra vagy hangulatra.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="custom-card text-center">
+                        <div class="icon-box"><i class="fa-solid fa-champagne-glasses"></i></div>
+                        <h3>Közösségépítés</h3>
+                        <p class="text-muted">Hozz létre eseményt ("Ma este a belvárosban?"), vagy csatlakozz másokhoz csoportos chatben.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="custom-card text-center">
+                        <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Biztonság</h3>
+                        <p class="text-muted">Ellenőrzött profilok, SOS gomb és biztonságos találkozóhelyek ajánlása a nyugodt szórakozásért.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APP SHOWCASE -->
+    <section id="showcase" class="section-padding bg-darker" style="background-color: #0b1120;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <h2 class="mb-4">A zsebedben a <span class="text-gradient">város ritmusa</span></h2>
+                    <p class="text-muted mb-4">A BuzzMatch szíve a dinamikus térkép. Sötét módban is tökéletesen látható, ikonokkal jelöli a partnerek eseményeit és a barátaid helyzetét.</p>
+                    
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fa-solid fa-check text-warning me-2"></i> Valós idejű "Vibe Check"</li>
+                        <li class="mb-3"><i class="fa-solid fa-check text-warning me-2"></i> Integrált útvonaltervezés</li>
+                        <li class="mb-3"><i class="fa-solid fa-check text-warning me-2"></i> Exkluzív kuponok a közelben</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center">
+                    <div class="app-mockup-wrapper">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/15546269686823972374" alt="App Térkép" class="app-mockup img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B / PARTNEREK -->
+    <section id="partners" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/15892799159178922315" alt="Bárpult" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="mb-3">Szórakozóhely Tulajdonos vagy?</h2>
+                    <h4 class="text-gradient mb-4">Növeld a forgalmadat velünk!</h4>
+                    <p class="text-muted">A BuzzMatch nem csak a vendégeknek, neked is szól. Kerülj fel a térképre kiemelt partnerként, és érj el közvetlenül több ezer szórakozni vágyó fiatalt.</p>
+                    
+                    <div class="d-flex mt-4 gap-3">
+                        <div class="p-3 bg-card rounded-3 border border-secondary">
+                            <i class="fa-solid fa-bullhorn text-warning mb-2"></i>
+                            <h6 class="mb-0">Promóciók</h6>
+                        </div>
+                        <div class="p-3 bg-card rounded-3 border border-secondary">
+                            <i class="fa-solid fa-chart-line text-warning mb-2"></i>
+                            <h6 class="mb-0">Statisztikák</h6>
+                        </div>
+                        <div class="p-3 bg-card rounded-3 border border-secondary">
+                            <i class="fa-solid fa-calendar-days text-warning mb-2"></i>
+                            <h6 class="mb-0">Események</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSAPAT -->
+    <section id="team" class="section-padding bg-darker" style="background-color: #0b1120;">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Akik a bulit szervezik</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="custom-card text-center">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17182597314819357640" alt="Troznai Roland" class="team-img">
+                        <h4>Troznai Roland</h4>
+                        <p class="text-warning mb-3">CEO & Alapító</p>
+                        <p class="text-muted small">A vízió megálmodója és a stratégiai irányok felelőse.</p>
+                        <div class="mt-3">
+                            <a href="#" class="text-white me-2"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="text-white"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="custom-card text-center">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17182597314819357640" alt="Szabó Marcell" class="team-img">
+                        <h4>Szabó Marcell</h4>
+                        <p class="text-warning mb-3">CTO</p>
+                        <p class="text-muted small">A technológiai háttér, az applikáció és a szerverek ura.</p>
+                        <div class="mt-3">
+                            <a href="#" class="text-white me-2"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="text-white"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="custom-card text-center">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17182597314819357640" alt="Lendvai Gergő" class="team-img">
+                        <h4>Lendvai Gergő</h4>
+                        <p class="text-warning mb-3">Marketing Manager</p>
+                        <p class="text-muted small">Aki gondoskodik róla, hogy mindenki halljon a BuzzMatch-ről.</p>
+                        <div class="mt-3">
+                            <a href="#" class="text-white me-2"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CTA -->
+    <footer id="download" class="cta-footer">
+        <div class="container">
+            <h2 class="display-4 mb-3">Készen állsz?</h2>
+            <p class="lead text-white mb-5">Töltsd le a BuzzMatch-et és találd meg a társaságod ma este!</p>
+            <a href="#" class="btn btn-primary-gradient btn-lg px-5 py-3">
+                LETÖLTÉS MOST <i class="fa-solid fa-download ms-2"></i>
+            </a>
+            
+            <div class="mt-5 border-top border-secondary pt-4 text-muted">
+                <p class="mb-0">© 2025 BuzzMatch. Minden jog fenntartva.</p>
+                <div class="small mt-2">
+                    <a href="#" class="text-muted text-decoration-none me-3">Adatvédelem</a>
+                    <a href="#" class="text-muted text-decoration-none">Kapcsolat</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (a mobil menü működéséhez) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
