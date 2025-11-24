@@ -51,6 +51,11 @@
                     <li class="nav-item"><a class="nav-link" href="#partners">Partnereknek</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Csapat</a></li>
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Kapcsolat
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
                         <a href="#download" class="btn btn-primary-gradient">Letöltés</a>
                     </li>
                 </ul>
@@ -72,7 +77,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/15158728875726651386" alt="BuzzMatch Party" class="hero-img img-fluid">
+                    <img src="/public/images/party.jpg" alt="BuzzMatch Party" class="hero-img img-fluid">
                 </div>
             </div>
         </div>
@@ -149,7 +154,7 @@
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 text-center">
                     <div class="app-mockup-wrapper">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/15546269686823972374" alt="App Térkép" class="app-mockup img-fluid">
+                        <img src="/public/images/map.jpg" alt="App Térkép" class="app-mockup img-fluid">
                     </div>
                 </div>
             </div>
@@ -161,7 +166,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/15892799159178922315" alt="Bárpult" class="img-fluid rounded-4 shadow-lg">
+                    <img src="/public/images/barcounter.jpg" alt="Bárpult" class="img-fluid rounded-4 shadow-lg">
                 </div>
                 <div class="col-lg-6 ps-lg-5">
                     <h2 class="mb-3">Szórakozóhely Tulajdonos vagy?</h2>
@@ -196,43 +201,75 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="custom-card text-center">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17182597314819357640" alt="Troznai Roland" class="team-img">
+                        <img src="/public/images/tr_profile.jpg" alt="Troznai Roland" class="team-img">
                         <h4>Troznai Roland</h4>
                         <p class="text-warning mb-3">CEO & Alapító</p>
                         <p class="text-muted small">A vízió megálmodója és a stratégiai irányok felelőse.</p>
                         <div class="mt-3">
-                            <a href="#" class="text-white me-2"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" class="text-white"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="https://github.com/Roland1520" class="text-white" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100013607384042" class="text-white" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card text-center">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17182597314819357640" alt="Szabó Marcell" class="team-img">
+                        <img src="/public/images/szm_profile.jpg" alt="Szabó Marcell" class="team-img">
                         <h4>Szabó Marcell</h4>
                         <p class="text-warning mb-3">CTO</p>
                         <p class="text-muted small">A technológiai háttér, az applikáció és a szerverek ura.</p>
                         <div class="mt-3">
-                            <a href="#" class="text-white me-2"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" class="text-white"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61569375449832" class="text-white" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="custom-card text-center">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17182597314819357640" alt="Lendvai Gergő" class="team-img">
+                        <img src="/public/images/lg_profile.png" alt="Lendvai Gergő" class="team-img">
                         <h4>Lendvai Gergő</h4>
                         <p class="text-warning mb-3">Marketing Manager</p>
                         <p class="text-muted small">Aki gondoskodik róla, hogy mindenki halljon a BuzzMatch-ről.</p>
                         <div class="mt-3">
-                            <a href="#" class="text-white me-2"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100081920079912" class="text-white" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ÚJ: MODAL (KAPCSOLAT ABLAK) -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Kapcsolatfelvétel</h5>
+            <!-- A btn-close-white-custom osztályt a CSS-ben definiáltuk -->
+            <button type="button" class="btn-close btn-close-white-custom" data-bs-dismiss="modal" aria-label="Bezárás"></button>
+          </div>
+          <div class="modal-body">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label">Email cím</label>
+                <input type="email" class="form-control" id="contactEmail" placeholder="pelda@email.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="contactSubject" class="form-label">Tárgy</label>
+                <input type="text" class="form-control" id="contactSubject" placeholder="Miben segíthetünk?" required>
+              </div>
+              <div class="mb-3">
+                <label for="contactMessage" class="form-label">Leírás</label>
+                <textarea class="form-control" id="contactMessage" rows="4" placeholder="Írd le az üzeneted..." required></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+            <!-- A gomb meghívja a sendEmail() függvényt -->
+            <button type="button" class="btn btn-primary-gradient" onclick="sendEmail()">Küldés</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER / CTA -->
     <footer id="download" class="cta-footer">
@@ -247,7 +284,6 @@
                 <p class="mb-0">© 2025 BuzzMatch. Minden jog fenntartva.</p>
                 <div class="small mt-2">
                     <a href="#" class="text-muted text-decoration-none me-3">Adatvédelem</a>
-                    <a href="#" class="text-muted text-decoration-none">Kapcsolat</a>
                 </div>
             </div>
         </div>

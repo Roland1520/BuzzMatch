@@ -200,6 +200,45 @@ h1, h2, h3, h4, h5 {
     border: 1px solid var(--accent-primary); /* Finom keret, hogy jobban látszódjon sötétben */
 }
 
+/* --- ÚJ: MODAL ÉS ŰRLAP STÍLUSOK (SÖTÉT TÉMA) --- */
+.modal-content {
+    background-color: var(--bg-card); /* Sötét kártya háttér */
+    color: var(--text-main);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-header, .modal-footer {
+    border-color: rgba(255,255,255,0.1); /* Halvány elválasztó vonalak */
+}
+
+.modal-title {
+    font-weight: 700;
+}
+
+/* Input mezők sötétítése */
+.form-control {
+    background-color: var(--bg-dark); /* Még sötétebb háttér az inputnak */
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-main);
+}
+
+.form-control:focus {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    border-color: var(--accent-primary); /* Narancs keret fókuszban */
+    box-shadow: 0 0 0 0.25rem rgba(251, 191, 36, 0.25); /* Narancs ragyogás */
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+/* X gomb a modal sarkában legyen fehér */
+.btn-close-white-custom {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
 /* Footer / CTA */
 .cta-footer {
     background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('http://googleusercontent.com/image_collection/image_retrieval/15158728875726651386');
