@@ -192,12 +192,12 @@ h1, h2, h3, h4, h5 {
 
 /* Logó stílus a navigációs sávban */
 .navbar-logo {
-    height: 40px;            /* A logó magassága igazodjon a szöveghez */
+    height: 55px;            /* A logó magassága igazodjon a szöveghez */
     width: auto;             /* A szélesség automatikus legyen */
     margin-right: 10px;      /* Kis távolság a logó és a szöveg között */
     vertical-align: middle;  /* Középre igazítás a szöveggel */
     border-radius: 8px;      /* Opcionális: lekerekített sarkok */
-    border: 1px solid var(--accent-primary); /* Finom keret, hogy jobban látszódjon sötétben */
+    border: none;            /* Nincs keret */
 }
 
 /* --- ÚJ: MODAL ÉS ŰRLAP STÍLUSOK (SÖTÉT TÉMA) --- */
